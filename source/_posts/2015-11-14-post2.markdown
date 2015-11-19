@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Post2"
+title: "blogsheet"
 date: 2015-11-14 14:54:42 -0800
 comments: true
-categories: 
+categories: newcategory
+
 ---
