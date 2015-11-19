@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Austin Shin]]></title>
-  <link href="http://austinshin.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: newcategory | Austin Shin]]></title>
+  <link href="http://austinshin.github.io/blog/categories/newcategory/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
   <updated>2015-11-18T19:16:03-08:00</updated>
   <id>http://austinshin.github.io/</id>
@@ -18,15 +18,6 @@
     <link href="http://austinshin.github.io/blog/2015/11/14/post2/"/>
     <updated>2015-11-14T14:54:42-08:00</updated>
     <id>http://austinshin.github.io/blog/2015/11/14/post2</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Title]]></title>
-    <link href="http://austinshin.github.io/blog/2015/11/14/title/"/>
-    <updated>2015-11-14T14:43:09-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/11/14/title</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
