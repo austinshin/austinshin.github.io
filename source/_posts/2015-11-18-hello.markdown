@@ -1,23 +1,14 @@
 ---
 layout: post
-title: "tutorials"
+title: "hello"
 date: 2015-11-18 22:32:36 -0800
 comments: true
 categories: 
 ---
-<p> is This is a normal paragraph:</p>
+<p> This is a normal paragraph:</p>
 hello test wut is happening
-**bolded ** _italicized_
->lolwtf use > to create a code block
-
-
-use # to create headers lol
-
-is this not space sensitive or line sensitive
-
-how do i create a new line break.
-woah
-<br /> hello lol
-
+**bolded**
+_italicized_
+>lolwtf
 
 
