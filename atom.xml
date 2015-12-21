@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2015-12-21T02:35:31-08:00</updated>
+  <updated>2015-12-21T02:56:58-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -18,32 +18,17 @@
     <link href="http://austinshin.github.io/blog/2015/11/18/hello/"/>
     <updated>2015-11-18T22:32:36-08:00</updated>
     <id>http://austinshin.github.io/blog/2015/11/18/hello</id>
-    <content type="html"><![CDATA[<p> This is a normal paragraph:</p>
+    <content type="html"><![CDATA[<p>Current todo list:</p>
 
+<ul>
+<li>learn vim</li>
+<li>CS61B, CS70, MATH54 prep</li>
+<li>rtfm on git</li>
+<li>projeuler q&rsquo;s</li>
+<li>tetris</li>
+<li>tictactoe</li>
+</ul>
 
-<p>hello test wut is happening
-<strong>bolded</strong>
-<em>italicized</em></p>
-
-<blockquote><p>lolwtf</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[blogsheet]]></title>
-    <link href="http://austinshin.github.io/blog/2015/11/14/post2/"/>
-    <updated>2015-11-14T14:54:42-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/11/14/post2</id>
-    <content type="html"><![CDATA[<p>&ldquo;hello&rdquo;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Title]]></title>
-    <link href="http://austinshin.github.io/blog/2015/11/14/title/"/>
-    <updated>2015-11-14T14:43:09-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/11/14/title</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
