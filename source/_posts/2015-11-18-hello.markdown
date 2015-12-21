@@ -4,11 +4,13 @@ title: "hello"
 date: 2015-11-18 22:32:36 -0800
 comments: true
 categories: 
----
-<p> This is a normal paragraph:</p>
-hello test wut is happening
-**bolded**
-_italicized_
->lolwtf
+--- 
+Current todo list:
 
+- learn vim
+- CS61B, CS70, MATH54 prep
+- rtfm on git
+- projeuler q's
+- tetris
+- tictactoe
 
