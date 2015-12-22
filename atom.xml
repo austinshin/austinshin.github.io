@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2015-12-22T02:55:04-08:00</updated>
+  <updated>2015-12-22T03:03:54-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[woO]]></title>
-    <link href="http://austinshin.github.io/blog/2015/12/22/woo/"/>
-    <updated>2015-12-22T02:54:59-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/12/22/woo</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
