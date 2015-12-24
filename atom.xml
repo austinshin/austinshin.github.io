@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2015-12-22T03:13:58-08:00</updated>
+  <updated>2015-12-24T02:47:56-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Post2]]></title>
-    <link href="http://austinshin.github.io/blog/2015/12/22/post2/"/>
-    <updated>2015-12-22T03:13:53-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/12/22/post2</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
@@ -31,11 +22,11 @@
 
 <ul>
 <li>learn vim</li>
-<li>CS61B, CS70, MATH54 prep</li>
 <li>rtfm on git</li>
-<li>projeuler q&rsquo;s</li>
+<li>projeuler q3</li>
 <li>tetris</li>
-<li>tictactoe</li>
+<li>tictact0e</li>
+<li>add link to sidebar (Github)</li>
 </ul>
 
 ]]></content>
