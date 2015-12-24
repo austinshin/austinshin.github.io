@@ -8,9 +8,8 @@ categories:
 Current todo list:
 
 - learn vim
-- CS61B, CS70, MATH54 prep
 - rtfm on git
-- projeuler q's
+- projeuler q3 
 - tetris
-- tictactoe
-
+- tictact0e
+- add link to sidebar (Github)
