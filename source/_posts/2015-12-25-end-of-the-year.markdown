@@ -3,7 +3,7 @@ layout: post
 title: "End of The Year"
 date: 2015-12-25 01:30:34 -0800
 comments: true
-published: false
+published: true
 categories: 
 ---
 It is pretty crazy how fast this year has gone by. A lot has happened since. One exact year ago, I remember shooting some hoops and reflecting on 2014. I guess now I'm reflecting on 2015 - lots of self-reflection for me. 
