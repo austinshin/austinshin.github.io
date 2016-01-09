@@ -30,5 +30,5 @@ shoutouts to:
 - Youri for the tutoring early in the semester + being the 'sister' I never had. 
 - Benny for best roommate/friend and always there to hang/chill/talk/rant to (oh and best uber driver LOL).
 
-cya 2015
+bye 2015
 
