@@ -29,6 +29,7 @@ shoutouts to:
 - Richard for being there to always talk to about league, life, movies, and school. 
 - Youri for the tutoring early in the semester + being the 'sister' I never had. 
 - Benny for best roommate/friend and always there to hang/chill/talk/rant to (oh and best uber driver LOL).
+I don't know where I would be without you guys. Thanks for the support.
 
 bye 2015
 
