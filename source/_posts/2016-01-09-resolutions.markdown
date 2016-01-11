@@ -16,6 +16,7 @@ I figured making some sort of resolutions or goals or challenges seems like a go
 - Read at least 15 books outside of classes 
 - From these books, learn vocabulary and implement it into daily life.
 - Get Yelp Elite
+- Learn more Guitar
 - Stop playing games during the school semester
 - Create a side project of some sort in the summer or hopefully do an internship. 
 - Do the first 20 projecteuler Problems
