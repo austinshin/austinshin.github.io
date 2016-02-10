@@ -6,12 +6,12 @@ comments: true
 categories: 
 ---
 #### Websites to look back on in the future
-.md stands for markdown. markdown is cool. online editor for markdown. 
+.md stands for markdown (it all makes sense now). markdown is cool. 
 
 - https://daringfireball.net/projects/markdown/basics  -- markdown tutorial
-- http://dillinger.io/ -- It reminds me of sharelatex.
-- http://code.io/ (friend's site) is cool too. 
-- https://github.com/jakiestfu/Youtube-TV -- used this to create this page. This will appear on the site soontm.
+- http://dillinger.io/ -- online editor for markdown. 
+- http://code.io/ (friend's site) 
+- https://github.com/jakiestfu/Youtube-TV -- used this to create above page. This will appear on the site soontm.
 - http://wdd.io/ - aka web design course that I will be auditing.
 - http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf -- LaTeX cheat sheet. 
 
