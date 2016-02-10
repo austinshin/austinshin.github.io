@@ -1,0 +1,18 @@
+---
+layout: post
+title: "useful links n stuff"
+date: 2016-02-10 02:39:41 -0800
+comments: true
+categories: 
+---
+#### Websites to look back on in the future
+.md stands for markdown. markdown is cool. online editor for markdown. 
+- https://daringfireball.net/projects/markdown/basics  -- markdown tutorial
+- http://dillinger.io/ -- It reminds me of sharelatex.
+- http://code.io/ (friend's site) is cool too. 
+- https://github.com/jakiestfu/Youtube-TV -- used this to create this page. This will appear on the site soontm.
+- http://wdd.io/ - aka web design course that I will be auditing.
+- http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf -- LaTeX cheat sheet. 
+
+
+
