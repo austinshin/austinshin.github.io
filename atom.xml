@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2016-02-10T02:48:43-08:00</updated>
+  <updated>2016-02-10T02:50:45-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -20,13 +20,17 @@
     <id>http://austinshin.github.io/blog/2016/02/10/stuff</id>
     <content type="html"><![CDATA[<h4>Websites to look back on in the future</h4>
 
-<p>.md stands for markdown. markdown is cool. online editor for markdown.
-- <a href="https://daringfireball.net/projects/markdown/basics">https://daringfireball.net/projects/markdown/basics</a>  &ndash; markdown tutorial
-- <a href="http://dillinger.io/">http://dillinger.io/</a> &ndash; It reminds me of sharelatex.
-- <a href="http://code.io/">http://code.io/</a> (friend&rsquo;s site) is cool too.
-- <a href="https://github.com/jakiestfu/Youtube-TV">https://github.com/jakiestfu/Youtube-TV</a> &ndash; used this to create this page. This will appear on the site soontm.
-- <a href="http://wdd.io/">http://wdd.io/</a> - aka web design course that I will be auditing.
-- <a href="http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf</a> &ndash; LaTeX cheat sheet.</p>
+<p>.md stands for markdown. markdown is cool. online editor for markdown.</p>
+
+<ul>
+<li><a href="https://daringfireball.net/projects/markdown/basics">https://daringfireball.net/projects/markdown/basics</a>  &ndash; markdown tutorial</li>
+<li><a href="http://dillinger.io/">http://dillinger.io/</a> &ndash; It reminds me of sharelatex.</li>
+<li><a href="http://code.io/">http://code.io/</a> (friend&rsquo;s site) is cool too.</li>
+<li><a href="https://github.com/jakiestfu/Youtube-TV">https://github.com/jakiestfu/Youtube-TV</a> &ndash; used this to create this page. This will appear on the site soontm.</li>
+<li><a href="http://wdd.io/">http://wdd.io/</a> - aka web design course that I will be auditing.</li>
+<li><a href="http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf</a> &ndash; LaTeX cheat sheet.</li>
+</ul>
+
 ]]></content>
   </entry>
   
