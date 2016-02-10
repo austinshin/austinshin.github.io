@@ -7,6 +7,7 @@ categories:
 ---
 #### Websites to look back on in the future
 .md stands for markdown. markdown is cool. online editor for markdown. 
+
 - https://daringfireball.net/projects/markdown/basics  -- markdown tutorial
 - http://dillinger.io/ -- It reminds me of sharelatex.
 - http://code.io/ (friend's site) is cool too. 
