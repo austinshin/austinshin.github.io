@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2016-02-20T08:01:08-08:00</updated>
+  <updated>2016-03-10T01:55:08-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[text editors]]></title>
+    <link href="http://austinshin.github.io/blog/2016/03/10/text-editors/"/>
+    <updated>2016-03-10T01:50:32-08:00</updated>
+    <id>http://austinshin.github.io/blog/2016/03/10/text-editors</id>
+    <content type="html"><![CDATA[<p>After working on my project 2 for CS61B, I&rsquo;d have to say that was one of the most difficult things I&rsquo;ve done to date. We basically made a text editor (i.e. notepad) with mouse, keyboard functionality. It was quite ironic as I was using a text editor&hellip; to code a text editor. But it was hard. Learned lots about the uses of packages, testing, modularity, and truly experienced for the first time on building something from literally nothing into something quite &ldquo;functional&rdquo;. There were a lot of bugs in the end product, and honestly I wasn&rsquo;t satisfied at the product I created. It was honestly overwhelming at times, but I&rsquo;m glad to be done.</p>
+
+<p>Hopefully I&rsquo;ll go back and try to rewrite it because I gave up on style halfway through (lol..).</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[updates]]></title>
+    <link href="http://austinshin.github.io/blog/2016/02/28/updates/"/>
+    <updated>2016-02-28T23:15:35-08:00</updated>
+    <id>http://austinshin.github.io/blog/2016/02/28/updates</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[useful links n stuff]]></title>
