@@ -34,5 +34,5 @@ Gaming Achievements:
 # DotA
     - Top 30 in NA Ladder 
 
-# Hearthston
+# Hearthstone
     - Peak Legend rating : 11
