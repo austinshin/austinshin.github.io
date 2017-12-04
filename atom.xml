@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2016-04-01T03:19:07-07:00</updated>
+  <updated>2017-12-04T11:58:38-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -12,134 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[random interactions]]></title>
-    <link href="http://austinshin.github.io/blog/2016/04/01/"/>
-    <updated>2016-04-01T03:15:51-07:00</updated>
-    <id>http://austinshin.github.io/blog/2016/04/</id>
-    <content type="html"><![CDATA[<p>I was walking down asian ghetto at night to pick up some Gypsy&rsquo;s. It was a long week filled with midterms and I was feeling kind of meh. This black guy walking right next to me is all happy and giddy and he just starts talking to me asking how I&rsquo;m doing. I&rsquo;m like &ldquo;eh it&rsquo;s going alright.&rdquo; Him? He told me he was happy and feeling super good. Tomorrow is his birthday and I started laughing because well April Fools Day is not a day you want to have a birthday on sometimes. He told me he didn&rsquo;t want tricks to be played on him, but other than that he was feeling pretty pumped. He gave me a fist bump and then walked away. I just smiled as I watched him drove away. Felt good.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[text editors]]></title>
-    <link href="http://austinshin.github.io/blog/2016/03/10/text-editors/"/>
-    <updated>2016-03-10T01:50:32-08:00</updated>
-    <id>http://austinshin.github.io/blog/2016/03/10/text-editors</id>
-    <content type="html"><![CDATA[<p>After working on my project 2 for CS61B, I&rsquo;d have to say that was one of the most difficult things I&rsquo;ve done to date. We basically made a text editor (i.e. notepad) with mouse, keyboard functionality. It was quite ironic as I was using a text editor&hellip; to code a text editor. But it was hard. Learned lots about the uses of packages, testing, modularity, and truly experienced for the first time on building something from literally nothing into something quite &ldquo;functional&rdquo;. There were a lot of bugs in the end product, and honestly I wasn&rsquo;t satisfied at the product I created. It was honestly overwhelming at times, but I&rsquo;m glad to be done.</p>
-
-<p>Hopefully I&rsquo;ll go back and try to rewrite it because I gave up on style halfway through (lol..).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[updates]]></title>
-    <link href="http://austinshin.github.io/blog/2016/02/28/updates/"/>
-    <updated>2016-02-28T23:15:35-08:00</updated>
-    <id>http://austinshin.github.io/blog/2016/02/28/updates</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[useful links n stuff]]></title>
-    <link href="http://austinshin.github.io/blog/2016/02/10/stuff/"/>
-    <updated>2016-02-10T02:39:41-08:00</updated>
-    <id>http://austinshin.github.io/blog/2016/02/10/stuff</id>
-    <content type="html"><![CDATA[<h4>Websites to look back on in the future</h4>
-
-<p>.md stands for markdown (it all makes sense now). markdown is cool.</p>
-
-<ul>
-<li><a href="https://daringfireball.net/projects/markdown/basics">https://daringfireball.net/projects/markdown/basics</a>  &ndash; markdown tutorial</li>
-<li><a href="http://dillinger.io/">http://dillinger.io/</a> &ndash; online editor for markdown.</li>
-<li><a href="http://code.io/">http://code.io/</a> (friend&rsquo;s site)</li>
-<li><a href="https://github.com/jakiestfu/Youtube-TV">https://github.com/jakiestfu/Youtube-TV</a> &ndash; used this to create above page. This will appear on the site soontm.</li>
-<li><a href="http://wdd.io/">http://wdd.io/</a> - aka web design course that I will be auditing.</li>
-<li><a href="http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf">http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf</a> &ndash; LaTeX cheat sheet.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ ]]></title>
-    <link href="http://austinshin.github.io/blog/2016/01/21/"/>
-    <updated>2016-01-21T02:07:11-08:00</updated>
-    <id>http://austinshin.github.io/blog/2016/01/</id>
-    <content type="html"><![CDATA[<p>stay foolish. stay hungry.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[resolutions]]></title>
-    <link href="http://austinshin.github.io/blog/2016/01/09/resolutions/"/>
-    <updated>2016-01-09T03:55:49-08:00</updated>
-    <id>http://austinshin.github.io/blog/2016/01/09/resolutions</id>
-    <content type="html"><![CDATA[<p>I figured making some sort of resolutions or goals or challenges seems like a good way to keep me &lsquo;on track&rsquo; for the year. If things change, at least I will be able to compare it with this post at the end of the year and see how the path was.</p>
-
-<ul>
-<li>Start going to the gym (RSF) aka get fit</li>
-<li>20 pushups, pullups, situps, jumprope daily</li>
-<li>Run 365 Miles</li>
-<li>Try to keep a daily diary of some sort.</li>
-<li>Learn one new thing each day and record it.</li>
-<li>Read at least 15 books outside of classes</li>
-<li>From these books, learn vocabulary and implement it into daily life.</li>
-<li>Get Yelp Elite</li>
-<li>Learn more Guitar</li>
-<li>Stop playing games during the school semester</li>
-<li>Create a side project of some sort in the summer or hopefully do an internship.</li>
-<li>Do the first 20 projecteuler Problems</li>
-<li>Get to know my professors (aka attend more office hours)</li>
-<li>Get declared as a CS major.</li>
-</ul>
-
-
-<p>Lots of goals, but it&rsquo;s a lot of small things that add up. But I think I&rsquo;m off to a good start.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[End of The Year]]></title>
-    <link href="http://austinshin.github.io/blog/2015/12/25/end-of-the-year/"/>
-    <updated>2015-12-25T01:30:34-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/12/25/end-of-the-year</id>
-    <content type="html"><![CDATA[<p>It is pretty crazy how fast this year has gone by. A lot has happened since. One exact year ago, I remember shooting some hoops and reflecting on 2014. I guess now I&rsquo;m reflecting on 2015 - lots of self-reflection for me.</p>
-
-<ul>
-<li>January: LCS season started after an eventful relegation match in 2014 (lol). CLG got fined for poaching Darshan which meant he wasn&rsquo;t allowed to play. Scarra was joining the coaching staff for the first time. I got to play with Benny again :D cause we needed a sub.</li>
-<li>February: If I remember correctly we just played a lot of games. This was the meta where Nidalee was broken as hell, and mid Ezreal was seeing a lot of play. I believe this was when we lost to TSM after a solid streak.</li>
-<li>March: Azir was also becoming stronger, but a lot of people were still running Leblanc, Lissandra, Corki, etc.</li>
-<li>April: Lost 0-3 in playoffs to TeamLiquid rip</li>
-<li>May: After much negotiation, drama, I (retired) and left CLG to focus on my studies. There&rsquo;s no point in wasting time I think + League was becoming unenjoyable.</li>
-<li>June: Moved in to Berkeley (from Arcadia) with Benny and immediately started summer school at Berkeley City College. Finding apartments is hard (also rent is expensive).</li>
-<li>July: Starting school was weird again, but I think BCC was a good stepping stone towards readjusting.</li>
-<li>August: Summer school ended (did really well) and for the most part, couldn&rsquo;t want to start classes.</li>
-<li>September: Classes at Berkeley started. I was taking CS61A (intro cs class), Math1B (equiv~ Calc BC [on crack apparently]), Phil1 (intro philosophy class), HIS7A (precivilwar US). Freaked out a bit due to the nature and difference of Berkeley classes compared to the rest of the classes I&rsquo;ve ever taken. This was technically my first time actually focusing and taking classes lol. I felt better when studying and think League actually helped me a lot with learning quicker and more efficiently. I&rsquo;ve definitely become a more curious person too.</li>
-<li>October: Midterm 1 season - fun stuff. Owned those midterms though and regained my confidence in being capable (which is really important because confidence and mentality define every aspect of your life). I also went to a Kaskade concert.</li>
-<li>November: Hard work paid off and got back into Berkeley. Also went to IEM San jose and saw all of CLG again.</li>
-<li>December: Started from the bottom (not really) now we here. Hella excited for next semester, because the classes I&rsquo;m taking are truly the gateway classes to all the supposedly cool and most useful classes of Computer Science.</li>
-</ul>
-
-
-<p>I told myself a long time ago &ldquo;Become so good at something you won&rsquo;t be ignored.&rdquo; I did it with League, I&rsquo;m going to try to do it with CS</p>
-
-<p>shoutouts to:</p>
-
-<ul>
-<li>Louis for all the support you&rsquo;ve given me in everything and the useful info/help recently that helps make my path to becoming good at CS &lsquo;easier&rsquo;.</li>
-<li>Richard for being there to always talk to about league, life, movies, and school.</li>
-<li>Youri for the tutoring early in the semester + being the &lsquo;sister&rsquo; I never had.</li>
-<li>Benny for best roommate/friend and always there to hang/chill/talk/rant to (oh and best uber driver LOL).
-I don&rsquo;t know where I would be without you guys. Thanks for the support.</li>
-</ul>
-
-
-<p>bye 2015</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>

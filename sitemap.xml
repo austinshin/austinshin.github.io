@@ -1,50 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://austinshin.github.io/blog/2016/04/01/</loc>
-    <lastmod>2016-04-01T03:15:51-07:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2016/03/10/text-editors/</loc>
-    <lastmod>2016-03-10T01:50:32-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2016/02/28/updates/</loc>
-    <lastmod>2016-02-28T23:15:35-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2016/02/10/stuff/</loc>
-    <lastmod>2016-02-10T02:39:41-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2016/01/21/</loc>
-    <lastmod>2016-01-21T02:07:11-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2016/01/09/resolutions/</loc>
-    <lastmod>2016-01-09T03:55:49-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/2015/12/25/end-of-the-year/</loc>
-    <lastmod>2015-12-25T01:30:34-08:00</lastmod>
-  </url>
-  <url>
     <loc>http://austinshin.github.io/blog/2015/11/18/hello/</loc>
     <lastmod>2015-11-18T22:32:36-08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://austinshin.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://austinshin.github.io/</loc>
   </url>
   <url>
+    <loc>http://austinshin.github.io/blog/archives/</loc>
+  </url>
+  <url>
     <loc>http://austinshin.github.io/playlist/</loc>
   </url>
   <url>
-    <loc>http://austinshin.github.io/about/</loc>
+    <loc>http://austinshin.github.io/blog/categories/</loc>
   </url>
   <url>
-    <loc>http://austinshin.github.io/blog/categories/</loc>
+    <loc>http://austinshin.github.io/about/</loc>
   </url>
 </urlset>
