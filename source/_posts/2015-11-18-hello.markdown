@@ -7,9 +7,4 @@ categories:
 --- 
 Current todo list:
 
-- learn vim
-- rtfm on git
-- projeuler q3 
-- tetris
-- tictact0e
-- add link to sidebar (Github)
+enigami
