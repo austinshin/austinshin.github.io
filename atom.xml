@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2017-12-04T12:03:47-08:00</updated>
+  <updated>2017-12-04T12:04:53-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -20,15 +20,7 @@
     <id>http://austinshin.github.io/blog/2015/11/18/hello</id>
     <content type="html"><![CDATA[<p>Current todo list:</p>
 
-<ul>
-<li>learn vim</li>
-<li>rtfm on git</li>
-<li>projeuler q3</li>
-<li>tetris</li>
-<li>tictact0e</li>
-<li>add link to sidebar (Github)</li>
-</ul>
-
+<p>enigami</p>
 ]]></content>
   </entry>
   
