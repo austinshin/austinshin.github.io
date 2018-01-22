@@ -6,7 +6,8 @@ comments: true
 sharing: true
 footer: true
 ---
-I am currently a Junior at UC Berkeley intending on majoring in Computer Science. I was a former professional League of Legends player, but am retired. I'm not sure what I want to do with progrmaming, but I am exploring my options and trying out different things. This site will have my future sideprojects, blogposts, and ramblings. 
+Former Professional League of Legends player.
+Aspiring Sofware Engineer.
 
 Gaming Achievements:
 
@@ -34,5 +35,3 @@ Gaming Achievements:
 # DotA
     - Top 30 in NA Ladder 
 
-# Hearthstone
-    - Peak Legend rating : 11

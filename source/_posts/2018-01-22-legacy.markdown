@@ -1,0 +1,8 @@
+---
+layout: post
+title: "legacy"
+date: 2018-01-22 10:23:26 -0800
+comments: true
+categories: 
+---
+Legacy blog post
