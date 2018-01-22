@@ -6,3 +6,65 @@ comments: true
 categories: 
 ---
 Greenfield BlogPost
+---
+# _Legacy - Project Aircasa_
+
+---
+#### Demo
+[Try Aircasa](aircasa.herokuapp.com)
+[Github](https://github.com/hrsf87-casa/aircasa)
+##### Summary
+- Adopted a Minimal Viable Product of a [Airbnb clone](https://github.com/airbnb-clone/airbnb) from a group of people who worked on it previously hence the name 'Legacy'.
+- Familiarized self with a new code base, refactored code, added multiple new features, and deployed to heroku.
+
+#### Stack
+- React 
+- Express
+- MYSQL
+##### Features Added
+- PassportJS/Bcrypt (Login Authentication)
+- Ability to host a place 
+- Track current and past bookings
+- Unique profile page 
+- Uploading files utilizing Amazon Web Services
+- Fetch live data via Airbnb API
+- Styling via Bootstrap and CSS Grid
+- Provide map data via Google Maps API
+
+## The Project Phase
+Interesting decisions/challenges encountered.
+1. Adopting a new codebase, modularity, documentation, and refactoring.
+2. Learning a new technology/Methods of research
+3. CSS Styling
+
+This was my first time adopting a sizable codebase. Some of the things I asked myself as I was going through were 
+- What does this application aim to achieve? - **Purpose**
+- How can I get this application to work so I can test its features? - **Ftability**
+- What potential features can I add to make this app stellar? - **Future**
+
+##### _**Modularity and Refactoring**_
+As I was reading through it the first time, I realized the importance of documentation as well as modularity. Most of the code that should have been split up into many different files were placed in one file making it confusing and hard to understand what was going on. Functions names were out of place, styling was incorrect, and it made a lot of components that should have been simple to understand complex. 
+
+I always aim to code in a way that if I were to read my code 1 year from now I'd be able to understand it. Doing so should allow others to understand it as well. So the first goal of the project immediately was to figure out what each components did, figure out why the application wasn't working as intended (because it was riddled with bugs), and **refactor the code**.
+
+My teammates and I went through each file carefully dissecting which pieces were unneeded and what was needed. The first day was spent documenting and understanding how everything worked and fell in place. Afterwards, we worked to create a working application where all we had to do afterwards was to add features individually.
+
+##### _**As a user I'd like to be able to have a profile page that has information about me.**_
+As the project went on I found myself working on user-facing features. The perspective of the the user was always a conscious thought. By coding in such a manner I found myself thinking about what a user would like which led to more and more features that would be nice to have (in other words, improve the user experience). Being a user of many websites myself, it was easy to think about what turns me off and makes me exit a website instantly. 
+
+Rather than overwhelming myself with all these "neat features" to include immediately, I incrementally added each nice feature to a ticketing system. Then, I worked on each one by one, keeping things modular, testing each feature as I progressed, and making sure it was just the way a user would like it. After a day's work, I reconvened with my team members to make sure the vision of the project was still intact. I also discussed with them if there were any other demanding features that came up that should be implemented first. **Communication** is key in making a project succeed. This was how most of the project was carried out afterwards.
+
+##### _**CSS Styling**_
+I found my biggest struggle in the project with the CSS. I've previously read how arcane CSS is. I've worked with template CSS bit by bit before, but this was the first time I was working from a true blank page. It was my first experience with creating a modular layout in which features can be implemented bit by bit while add styles. I've used bootstrap before when working with small pieces. This time though, I wanted to undertake a bigger challenge and decided to learn the new CSS Grid system. It could have gone better, but I learned a fair amount about some of the limitations as well as the magic of CSS. 
+
+One of the most most important things I've learned is **try to plan as much of the layout as possible early.** 
+Also, **don't hardcode pixels. Use % and vw/vh.** 
+One more thing, **making a site with CSS from scratch is hard and takes practice.** But it was fun!
+
+### Wrap Up ###
+- Modularity, code documentation, proper styling leads to less confusion
+- This means when working with other or new teammembers it makes it easier on them to implement new features.
+- Fewer bugs this way too!
+- Importance of UI design (style) nearly matches functionality.
+- If it looks ugly, why would I use it even if it is functional?
+- Think from the perspective of a user always! What does the user want?
