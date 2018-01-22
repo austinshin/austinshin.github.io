@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-01-22T11:25:58-08:00</updated>
+  <updated>2018-01-22T12:07:05-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -72,7 +72,7 @@
 
 <p>This was my first time adopting a sizable codebase. Some of the things I asked myself as I was going through were
 - What does this application aim to achieve? - <strong>Purpose</strong>
-- How can I get this application to work so I can test its features? - <strong>Ftability</strong>
+- How can I get this application to work so I can test its features? - <strong>Stability</strong>
 - What potential features can I add to make this app stellar? - <strong>Future</strong></p>
 
 <h5><em><strong>Modularity and Refactoring</strong></em></h5>
@@ -118,20 +118,20 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
     <id>http://austinshin.github.io/blog/2018/01/22/greenfield</id>
     <content type="html"><![CDATA[<h2>Greenfield BlogPost</h2>
 
-<h1><em>Legacy - Project Aircasa</em></h1>
+<h1><em>Greenfield - Project slackcasa</em></h1>
 
 <hr />
 
 <h4>Demo</h4>
 
-<p><a href="aircasa.herokuapp.com">Try Aircasa</a>
-<a href="https://github.com/hrsf87-casa/aircasa">Github</a></p>
+<p><a href="https://slackk-casa.herokuapp.com/">Try Slackcasa</a>
+<a href="https://github.com/austinshin/slackk-casa">Github</a></p>
 
 <h5>Summary</h5>
 
 <ul>
-<li>Adopted a Minimal Viable Product of a <a href="https://github.com/airbnb-clone/airbnb">Airbnb clone</a> from a group of people who worked on it previously hence the name &lsquo;Legacy&rsquo;.</li>
-<li>Familiarized self with a new code base, refactored code, added multiple new features, and deployed to heroku.</li>
+<li>Created a full stack web application clone from scratch of <a href="https://slack.com/">Slack</a>.</li>
+<li>Worked with Trello (ticketing system), 3 other team members and implemented features for one week.</li>
 </ul>
 
 
@@ -140,63 +140,71 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
 <ul>
 <li>React</li>
 <li>Express</li>
-<li>MYSQL
+<li>PostGreSQL
 
 <h5>Features Added</h5></li>
-<li>PassportJS/Bcrypt (Login Authentication)</li>
-<li>Ability to host a place</li>
-<li>Track current and past bookings</li>
-<li>Unique profile page</li>
-<li>Uploading files utilizing Amazon Web Services</li>
-<li>Fetch live data via Airbnb API</li>
-<li>Styling via Bootstrap and CSS Grid</li>
-<li>Provide map data via Google Maps API</li>
+<li>Login Authentication via PassportJS</li>
+<li>Passport Encryption via Bcrypt</li>
+<li>Route handling via React-Router</li>
+<li>Realtime Live Chat system between clients via Native JS Websockets</li>
+<li>E-mail notifications via Nodemailer and CronJob</li>
+<li>Unique workspaces (chatrooms) for users to join/chat</li>
+<li>Styling done via Bootstrap</li>
 </ul>
 
 
 <h2>The Project Phase</h2>
 
 <p>Interesting decisions/challenges encountered.
-1. Adopting a new codebase, modularity, documentation, and refactoring.
-2. Learning a new technology/Methods of research
-3. CSS Styling</p>
+1. Creation of a web application with skills learned from before for the first time.
+2. Working as a group to create a vision for the application and working to make that vision come true.
+3. Creating a ticketing system.
+4. Modularizing and documenting code.
+5. Git Workflow
+6. Websockets, Postgres, Passport</p>
 
-<p>This was my first time adopting a sizable codebase. Some of the things I asked myself as I was going through were
-- What does this application aim to achieve? - <strong>Purpose</strong>
-- How can I get this application to work so I can test its features? - <strong>Ftability</strong>
-- What potential features can I add to make this app stellar? - <strong>Future</strong></p>
+<p>This was my first time working with multiple team members to create a project.<br/>
+The application goal was to create an interactive, seamless, lagless environment with users connecting and chatting to each other.
+My goal was to practice communicating effectively, create a modular codebase such that other members could implement features without running into merge conflicts, and learn new technologies.</p>
 
-<h5><em><strong>Modularity and Refactoring</strong></em></h5>
+<h5><strong>Planning Phase</strong></h5>
 
-<p>As I was reading through it the first time, I realized the importance of documentation as well as modularity. Most of the code that should have been split up into many different files were placed in one file making it confusing and hard to understand what was going on. Functions names were out of place, styling was incorrect, and it made a lot of components that should have been simple to understand complex.</p>
+<p>My team members and I spent the entire first day talking about the project. I proposed the idea we try to plan as much as possible so that we have a good sense of the big picture. By creating a vision it helps when thinking about features to implement. You can then ask yourself, does this feature work towards the vision? If not, do we need to reconvene and reevaluate our vision? From past experience, having an end goal helps keep people focused and not lose their sense of direction.</p>
 
-<p>I always aim to code in a way that if I were to read my code 1 year from now I&rsquo;d be able to understand it. Doing so should allow others to understand it as well. So the first goal of the project immediately was to figure out what each components did, figure out why the application wasn&rsquo;t working as intended (because it was riddled with bugs), and <strong>refactor the code</strong>.</p>
+<p>By the end of the day, we had multiple features to implement ticketed in the perspective of a user. <strong>As a user I&rsquo;d like to have this feature&hellip;</strong> i.e. As a user I&rsquo;d like to be able to login. This obviously led to multiple features added on top of that, but having everything written out and ticketed allows for anyone to pick up the &lsquo;ticket&rsquo; and start working towards it. Also, by separating everything out and planning most of it meant it was easy to keep things documented and modular.</p>
 
-<p>My teammates and I went through each file carefully dissecting which pieces were unneeded and what was needed. The first day was spent documenting and understanding how everything worked and fell in place. Afterwards, we worked to create a working application where all we had to do afterwards was to add features individually.</p>
+<p>Topics like
+- &lsquo;What is our schema for pgsql going to look like?&rsquo;.
+- &lsquo;What are our variables name going to be?&rsquo;
+- &lsquo;What form is our data going to be sent in when communicating with the front end and back end?&rsquo;</p>
 
-<h5><em><strong>As a user I&rsquo;d like to be able to have a profile page that has information about me.</strong></em></h5>
+<p>We took many pictures and uploaded them for easy viewing and later reference.
+It was in a sense exhausting, but felt well worth it. Everyone felt on the same page which is super key in group projects.</p>
 
-<p>As the project went on I found myself working on user-facing features. The perspective of the the user was always a conscious thought. By coding in such a manner I found myself thinking about what a user would like which led to more and more features that would be nice to have (in other words, improve the user experience). Being a user of many websites myself, it was easy to think about what turns me off and makes me exit a website instantly.</p>
+<h4>_<strong>Implementation</strong>__</h4>
 
-<p>Rather than overwhelming myself with all these &ldquo;neat features&rdquo; to include immediately, I incrementally added each nice feature to a ticketing system. Then, I worked on each one by one, keeping things modular, testing each feature as I progressed, and making sure it was just the way a user would like it. After a day&rsquo;s work, I reconvened with my team members to make sure the vision of the project was still intact. I also discussed with them if there were any other demanding features that came up that should be implemented first. <strong>Communication</strong> is key in making a project succeed. This was how most of the project was carried out afterwards.</p>
+<p>It turned out that some of these technologies we were working on were new to everyone. Since everyone wanted to learn and we had four people, it made sense to do some pair programming. Adopting the driver-navigator system we proceeded to split up the work on front end and database/back end. We switched around partners to learn about websockets and how they worked on both the front and back end.</p>
 
-<h5><em><strong>CSS Styling</strong></em></h5>
+<h4>_<strong>Websockets</strong>__</h4>
 
-<p>I found my biggest struggle in the project with the CSS. I&rsquo;ve previously read how arcane CSS is. I&rsquo;ve worked with template CSS bit by bit before, but this was the first time I was working from a true blank page. It was my first experience with creating a modular layout in which features can be implemented bit by bit while add styles. I&rsquo;ve used bootstrap before when working with small pieces. This time though, I wanted to undertake a bigger challenge and decided to learn the new CSS Grid system. It could have gone better, but I learned a fair amount about some of the limitations as well as the magic of CSS.</p>
+<p>Websockets are really cool. I&rsquo;ve worked on a chat system before but that was using native RESTFUL API where messages were updated via a setInterval. Now with websockets, everything was going to be realtime. It solves the problem of browsers being able to communicate to servers and servers to other browsers what seems to be instantly. This bi directional connection was the key to making our chat system work so it was naturally very important we implement it properly and in a way where we can reuse it when we need to implement other features.</p>
 
-<p>One of the most most important things I&rsquo;ve learned is <strong>try to plan as much of the layout as possible early.</strong>
-Also, <strong>don&rsquo;t hardcode pixels. Use % and vw/vh.</strong>
-One more thing, <strong>making a site with CSS from scratch is hard and takes practice.</strong> But it was fun!</p>
+<p>We chose native websockets over sockets.io to get a better understanding of how websockets work.</p>
+
+<h4>_<strong>PostgreSQL</strong>__</h4>
+
+<p>Why postgres over MongoDB or MYSQL? Well, it made sense to use an ORM, but also a database in which you can join tables because of the nature of our project&rsquo;s schema. I already knew how to use MYSQL so I wanted to undertake a challenge of learning something new. The answer was PostgreSQL. It was fairly easy to pick up and intuitive to use. It shared many similarities as MYSQL (unsurprisingly).</p>
+
+<p>As the mvp fell into place, my team members and I started to split off and work on separate features. I wanted to work on a notification system in which text and email notifications would be sent. I realized while I was planning it how much depth there would be when creating such a system. Having one type of notification system is hard enough, but add two? That&rsquo;s another layer of complexity. Then I thought about, what if you want to turn off notifications&hellip; or what if you wanted only specific notifications. I didn&rsquo;t have much time left, so I worked on what I could. Twilio or bandwidth is good to use for text notifications and I worked on it in the past. I decided to use nodemailer to send e-mail notifications and played around with cronjob to filter out certain emails and send them on a interval. It was cool (and spammy)!</p>
 
 <h3>Wrap Up</h3>
 
 <ul>
-<li>Modularity, code documentation, proper styling leads to less confusion</li>
-<li>This means when working with other or new teammembers it makes it easier on them to implement new features.</li>
-<li>Fewer bugs this way too!</li>
-<li>Importance of UI design (style) nearly matches functionality.</li>
-<li>If it looks ugly, why would I use it even if it is functional?</li>
-<li>Think from the perspective of a user always! What does the user want?</li>
+<li>I learned a huge deal about planning and how long it could take. The project was seemingly small, but it took a whole day. I wonder what it&rsquo;d be like in a big company with a big app.</li>
+<li>Keeping things modular allows you to keep to problem small, while maintaing a vision. It means you can implement new features separately without breaking the function of the app.</li>
+<li>Documentation is key because it means your team members can read and understand the code. This also means good code styling and function names.</li>
+<li>As a result of point 3, our project was picked the most by others in our class to reuse for their next project.</li>
+<li>Learning new technologies is always fun, and I was surprised at how good I&rsquo;ve gotten at it. I&rsquo;m aiming to get faster and better at it.</li>
 </ul>
 
 ]]></content>
