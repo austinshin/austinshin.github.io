@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "greenfield"
+title: "Slack Clone"
 date: 2018-01-22 10:23:16 -0800
 comments: true
 categories: 
----
-Greenfield BlogPost
 ---
 # _Greenfield - Project slackcasa_
 
 ---
 #### Demo
 [Try Slackcasa](https://slackk-casa.herokuapp.com/)
+
 [Github](https://github.com/austinshin/slackk-casa)
 ##### Summary
 - Created a full stack web application clone from scratch of [Slack](https://slack.com/).
