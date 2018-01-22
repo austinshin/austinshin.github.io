@@ -37,7 +37,7 @@ Interesting decisions/challenges encountered.
 
 This was my first time adopting a sizable codebase. Some of the things I asked myself as I was going through were 
 - What does this application aim to achieve? - **Purpose**
-- How can I get this application to work so I can test its features? - **Ftability**
+- How can I get this application to work so I can test its features? - **Stability**
 - What potential features can I add to make this app stellar? - **Future**
 
 ##### _**Modularity and Refactoring**_
