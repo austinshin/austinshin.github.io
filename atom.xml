@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-01-22T12:09:50-08:00</updated>
+  <updated>2018-01-22T12:12:37-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -14,24 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[habits]]></title>
-    <link href="http://austinshin.github.io/blog/2018/01/22/habits/"/>
-    <updated>2018-01-22T10:23:33-08:00</updated>
-    <id>http://austinshin.github.io/blog/2018/01/22/habits</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Airbnb Clone Project]]></title>
+    <title type="html"><![CDATA[Aircasa Project]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/22/legacy/"/>
     <updated>2018-01-22T10:23:26-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/22/legacy</id>
-    <content type="html"><![CDATA[<h1><em>Legacy - Project Aircasa</em></h1>
-
-<hr />
-
-<h4>Demo</h4>
+    <content type="html"><![CDATA[<h4>Demo</h4>
 
 <p><a href="aircasa.herokuapp.com">Try Aircasa</a>
 <a href="https://github.com/hrsf87-casa/aircasa">Github</a></p>
@@ -112,15 +99,11 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Slack Clone Project]]></title>
+    <title type="html"><![CDATA[Slackcasa Project]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/22/greenfield/"/>
     <updated>2018-01-22T10:23:16-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/22/greenfield</id>
-    <content type="html"><![CDATA[<h1><em>Greenfield - Project slackcasa</em></h1>
-
-<hr />
-
-<h4>Demo</h4>
+    <content type="html"><![CDATA[<h4>Demo</h4>
 
 <p><a href="https://slackk-casa.herokuapp.com/">Try Slackcasa</a></p>
 
