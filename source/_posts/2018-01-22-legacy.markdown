@@ -12,6 +12,8 @@ categories:
 - Adopted a Minimal Viable Product of a [Airbnb clone](https://github.com/airbnb-clone/airbnb) from a group of people who worked on it previously hence the name 'Legacy'.
 - Familiarized self with a new code base, refactored code, added multiple new features, and deployed to heroku.
 
+<!-- more -->
+
 #### Stack
 - React 
 - Express

@@ -13,6 +13,8 @@ categories:
 - Created a full stack web application clone from scratch of [Slack](https://slack.com/).
 - Worked with Trello (ticketing system), 3 other team members and implemented features for one week.
 
+<!-- more -->
+
 #### Stack
 - React 
 - Express
