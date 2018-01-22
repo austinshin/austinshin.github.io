@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "Airbnb Clone Project"
+title: "Aircasa Project"
 date: 2018-01-22 10:23:26 -0800
 comments: true
 categories: 
----
-# _Legacy - Project Aircasa_
-
 ---
 #### Demo
 [Try Aircasa](aircasa.herokuapp.com)
