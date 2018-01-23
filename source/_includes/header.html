@@ -1,6 +1,6 @@
 <div class="profilepic">
 	{% if site.email_md5 %}
-	<img src="http://www.gravatar.com/avatar/{{ site.email_md5 }}?s=160" alt="Profile Picture" style="width: 160px;" />
+	<a href="/"><img src="http://www.gravatar.com/avatar/{{ site.email_md5 }}?s=160" alt="Profile Picture" style="width: 160px;" /></a>
 	{% else %}
 	<script src="{{ root_url }}/javascripts/md5.js"></script>
 	<script type="text/javascript">

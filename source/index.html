@@ -1,20 +1,17 @@
 ---
-layout: default
+layout: page
+title: "index"
+date: 2018-01-22 17:14
+comments: true
+sharing: true
+footer: true
 ---
+<p>
+<h1>About</h1>
+I used to be a professional League of Legends player for CLG. I am currently an aspiring software engineer. This site has my <a href = "/blog">blog posts</a> and <a href="/blog/categories/sideproject">side projects</a>.
 
-{% assign index = true %}
-<div itemscope itemtype="http://schema.org/Blog">
-{% for post in paginator.posts %}
-{% assign content = post.content %}
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">{% include article.html %}</article>
-{% endfor %}
-</div>
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{paginator.previous_page}}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{paginator.next_page}}" class="next">Next</a>
-    {% endif %}
-    <div class="center"><a href="{{ root_url }}/blog/archives">Blog Archives</a></div>
-</nav>
+Here is a quick link to my <a href="github.com/austinshin">Github</a> as well!
+
+<h2>Interests</h2>
+I enjoy playing games, listening to music, and solving problems!
+</p>

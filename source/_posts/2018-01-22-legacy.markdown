@@ -3,7 +3,7 @@ layout: post
 title: "Aircasa Project"
 date: 2018-01-22 10:23:26 -0800
 comments: true
-categories: 
+categories: sideproject
 ---
 #### Demo
 [Try Aircasa](aircasa.herokuapp.com)
