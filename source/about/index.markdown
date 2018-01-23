@@ -8,10 +8,15 @@ footer: true
 ---
 Former Professional League of Legends player.
 Aspiring Sofware Engineer.
+[Twitch](www.twitch.tv/link)
 
 Gaming Achievements:
 
 # League of Legends
+	- Team HoodStompGravesGG
+	- Team Orbit
+	- Team CLG Black
+	- Team CLG
     - 2nd GIGABYTE Esports LAN
     - Leaguecraft ggClassic Presented by Arqade
     - 3rd National ESL Pro Series Season 4
@@ -26,12 +31,18 @@ Gaming Achievements:
     - 3rd NA LCS Spring Season 4 Playoffs
     - 3/4th ALL STARS Paris 2014
     - 5th NA LCS Summer Season 4 
-    - 5/6th NA LCS Summer Sesaon 4 Playoffs
+    - 5/6th NA LCS Summer Season 4 Playoffs
     - 2nd IEM SEASON IX - Cologne
     - 3rd NA LCS Spring Season 5
     - 5/6th NA LCS Spring Season 5 Playoffs
     - Top 5 NA Ladder
 
 # DotA
-    - Top 30 in NA Ladder 
+    - Top 30 in NA Ladder  
+
+# Hearthstone
+	- Peak rank 11 Legend
+
+# H1Z1
+	- Royalty
 
