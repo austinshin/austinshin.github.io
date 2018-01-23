@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-01-22T12:18:06-08:00</updated>
+  <updated>2018-01-22T16:59:16-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Aircasa Project]]></title>
-    <link href="http://austinshin.github.io/blog/2018/01/22/legacy/"/>
+    <link href="http://austinshin.github.io/description"/>
     <updated>2018-01-22T10:23:26-08:00</updated>
-    <id>http://austinshin.github.io/blog/2018/01/22/legacy</id>
+    <id>http://austinshin.github.io/legacy</id>
     <content type="html"><![CDATA[<h4>Demo</h4>
 
 <p><a href="aircasa.herokuapp.com">Try Aircasa</a>
@@ -103,9 +103,9 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
   
   <entry>
     <title type="html"><![CDATA[Slackcasa Project]]></title>
-    <link href="http://austinshin.github.io/blog/2018/01/22/greenfield/"/>
+    <link href="http://austinshin.github.io/description"/>
     <updated>2018-01-22T10:23:16-08:00</updated>
-    <id>http://austinshin.github.io/blog/2018/01/22/greenfield</id>
+    <id>http://austinshin.github.io/greenfield</id>
     <content type="html"><![CDATA[<h4>Demo</h4>
 
 <p><a href="https://slackk-casa.herokuapp.com/">Try Slackcasa</a></p>
@@ -200,18 +200,18 @@ It was in a sense exhausting, but felt well worth it. Everyone felt on the same 
   
   <entry>
     <title type="html"><![CDATA[mvp]]></title>
-    <link href="http://austinshin.github.io/blog/2018/01/22/mvp/"/>
+    <link href="http://austinshin.github.io/description"/>
     <updated>2018-01-22T10:23:10-08:00</updated>
-    <id>http://austinshin.github.io/blog/2018/01/22/mvp</id>
+    <id>http://austinshin.github.io/mvp</id>
     <content type="html"><![CDATA[<p>MVP blog post</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[hello]]></title>
-    <link href="http://austinshin.github.io/blog/2015/11/18/hello/"/>
+    <link href="http://austinshin.github.io/description"/>
     <updated>2015-11-18T22:32:36-08:00</updated>
-    <id>http://austinshin.github.io/blog/2015/11/18/hello</id>
+    <id>http://austinshin.github.io/hello</id>
     <content type="html"><![CDATA[<p>Current todo list:</p>
 
 <p>enigami</p>
