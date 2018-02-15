@@ -154,6 +154,7 @@ You can skip all the previous installation steps in the section above and trying
 ```
 
 Docker is an OS virtualization within a computer which provides a layer of abstraction. This means all of the apps you want to build will always build equally across different types of machines. Imagine if you were building an application on OSX, but randomly decided to change operating systems to Windows. Instead of reinstalling everything on Windows, you can just install docker, create a docker image of your app, pull it to your windows, then continue to work off that. It enables **consistency across environments.**
+
 -
 
 # Using Docker
