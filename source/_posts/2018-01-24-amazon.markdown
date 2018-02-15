@@ -15,6 +15,8 @@ Listings Endpoints
   - (GET) content query for data  -> returns an array of listing objects
   - (GET) collab query for data -> returns an array of listing objects
 
+<!-- more -->
+
 
 Using Redis:
 Some questions I asked myself while thinking about and hearing about redis are...

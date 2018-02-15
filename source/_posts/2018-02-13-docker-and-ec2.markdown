@@ -19,6 +19,9 @@ Things this guide will cover and hopefully answer:
 4. How do I set it up?
 
 -
+
+<!--more-->
+
 **Disclaimer:**
 This is a naive method. It does not use ECS, load balancing, clusters all that stuff. You can look that up (and its very confusing tutorials which I thoroughly browsed) if you wish.
 
