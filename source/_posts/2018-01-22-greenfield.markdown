@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Slackcasa Project"
+title: "Slackcasa - chatting web app"
 date: 2018-01-22 10:23:16 -0800
 comments: true
 categories: sideproject
@@ -16,7 +16,7 @@ categories: sideproject
 <!-- more -->
 
 #### Stack
-- React 
+- React
 - Express
 - PostGreSQL
 ##### Features Added
@@ -25,7 +25,7 @@ categories: sideproject
 - Route handling via React-Router
 - Realtime Live Chat system between clients via Native JS Websockets
 - E-mail notifications via Nodemailer and CronJob
-- Unique workspaces (chatrooms) for users to join/chat 
+- Unique workspaces (chatrooms) for users to join/chat
 - Styling done via Bootstrap
 
 ## The Project Phase
@@ -33,22 +33,22 @@ Interesting decisions/challenges encountered.
 1. Creation of a web application with skills learned from before for the first time.
 2. Working as a group to create a vision for the application and working to make that vision come true.
 3. Creating a ticketing system.
-4. Modularizing and documenting code. 
+4. Modularizing and documenting code.
 5. Git Workflow
 6. Websockets, Postgres, Passport
 
-This was my first time working with multiple team members to create a project.  
+This was my first time working with multiple team members to create a project.
 The application goal was to create an interactive, seamless, lagless environment with users connecting and chatting to each other.
 My goal was to practice communicating effectively, create a modular codebase such that other members could implement features without running into merge conflicts, and learn new technologies.
 
 ##### **Planning Phase**
-My team members and I spent the entire first day talking about the project. I proposed the idea we try to plan as much as possible so that we have a good sense of the big picture. By creating a vision it helps when thinking about features to implement. You can then ask yourself, does this feature work towards the vision? If not, do we need to reconvene and reevaluate our vision? From past experience, having an end goal helps keep people focused and not lose their sense of direction. 
+My team members and I spent the entire first day talking about the project. I proposed the idea we try to plan as much as possible so that we have a good sense of the big picture. By creating a vision it helps when thinking about features to implement. You can then ask yourself, does this feature work towards the vision? If not, do we need to reconvene and reevaluate our vision? From past experience, having an end goal helps keep people focused and not lose their sense of direction.
 
 By the end of the day, we had multiple features to implement ticketed in the perspective of a user. **As a user I'd like to have this feature...** i.e. As a user I'd like to be able to login. This obviously led to multiple features added on top of that, but having everything written out and ticketed allows for anyone to pick up the 'ticket' and start working towards it. Also, by separating everything out and planning most of it meant it was easy to keep things documented and modular.
 
-Topics like 
-- 'What is our schema for pgsql going to look like?'. 
-- 'What are our variables name going to be?' 
+Topics like
+- 'What is our schema for pgsql going to look like?'.
+- 'What are our variables name going to be?'
 - 'What form is our data going to be sent in when communicating with the front end and back end?'
 
 We took many pictures and uploaded them for easy viewing and later reference.
@@ -58,7 +58,7 @@ It was in a sense exhausting, but felt well worth it. Everyone felt on the same 
 It turned out that some of these technologies we were working on were new to everyone. Since everyone wanted to learn and we had four people, it made sense to do some pair programming. Adopting the driver-navigator system we proceeded to split up the work on front end and database/back end. We switched around partners to learn about websockets and how they worked on both the front and back end.
 
 #### _**Websockets**__
-Websockets are really cool. I've worked on a chat system before but that was using native RESTFUL API where messages were updated via a setInterval. Now with websockets, everything was going to be realtime. It solves the problem of browsers being able to communicate to servers and servers to other browsers what seems to be instantly. This bi directional connection was the key to making our chat system work so it was naturally very important we implement it properly and in a way where we can reuse it when we need to implement other features. 
+Websockets are really cool. I've worked on a chat system before but that was using native RESTFUL API where messages were updated via a setInterval. Now with websockets, everything was going to be realtime. It solves the problem of browsers being able to communicate to servers and servers to other browsers what seems to be instantly. This bi directional connection was the key to making our chat system work so it was naturally very important we implement it properly and in a way where we can reuse it when we need to implement other features.
 
 We chose native websockets over sockets.io to get a better understanding of how websockets work.
 
@@ -70,6 +70,6 @@ As the mvp fell into place, my team members and I started to split off and work 
 ### Wrap Up ###
 - I learned a huge deal about planning and how long it could take. The project was seemingly small, but it took a whole day. I wonder what it'd be like in a big company with a big app.
 - Keeping things modular allows you to keep to problem small, while maintaing a vision. It means you can implement new features separately without breaking the function of the app.
-- Documentation is key because it means your team members can read and understand the code. This also means good code styling and function names. 
+- Documentation is key because it means your team members can read and understand the code. This also means good code styling and function names.
 - As a result of point 3, our project was picked the most by others in our class to reuse for their next project.
-- Learning new technologies is always fun, and I was surprised at how good I've gotten at it. I'm aiming to get faster and better at it. 
+- Learning new technologies is always fun, and I was surprised at how good I've gotten at it. I'm aiming to get faster and better at it.
