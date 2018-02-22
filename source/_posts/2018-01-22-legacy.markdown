@@ -6,7 +6,8 @@ comments: true
 categories: sideproject
 ---
 #### Demo
-[Try Aircasa](aircasa.herokuapp.com)
+[Try Aircasa](http://aircasa.herokuapp.com/)
+
 [Github](https://github.com/hrsf87-casa/aircasa)
 ##### Summary
 - Adopted a Minimal Viable Product of a [Airbnb clone](https://github.com/airbnb-clone/airbnb) from a group of people who worked on it previously hence the name 'Legacy'.
