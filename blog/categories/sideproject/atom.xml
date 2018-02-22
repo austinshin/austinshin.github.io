@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sideproject | Austin Shin]]></title>
   <link href="http://austinshin.github.io/blog/categories/sideproject/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-02-22T14:19:25-08:00</updated>
+  <updated>2018-02-22T14:20:40-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -177,7 +177,7 @@ unit test endpoints</p>
 
 <p>ec2 related stuff:
 <a href="https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce">https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce</a>
-ssh -i ~/.ssh/redis.pem <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x65;&#99;&#50;&#45;&#117;&#115;&#x65;&#114;&#64;&#51;&#52;&#46;&#50;&#x30;&#57;&#46;&#x39;&#53;&#46;&#49;&#x36;&#48;">&#x65;&#x63;&#x32;&#45;&#x75;&#x73;&#x65;&#x72;&#x40;&#x33;&#x34;&#x2e;&#x32;&#48;&#x39;&#46;&#57;&#53;&#46;&#49;&#54;&#48;</a></p>
+ssh -i ~/.ssh/redis.pem <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#101;&#99;&#50;&#45;&#117;&#115;&#101;&#114;&#x40;&#51;&#x34;&#x2e;&#x32;&#48;&#57;&#x2e;&#x39;&#53;&#x2e;&#49;&#x36;&#x30;">&#x65;&#x63;&#50;&#45;&#117;&#115;&#x65;&#x72;&#64;&#51;&#x34;&#46;&#50;&#x30;&#57;&#46;&#57;&#53;&#46;&#x31;&#x36;&#48;</a></p>
 
 <p>docker stuff</p>
 
@@ -217,7 +217,7 @@ ecs-cli up &ndash;keypair app &ndash;capability-iam &ndash;size 3 &ndash;instanc
 ecs-cli compose &ndash;file docker-compose.yml up
 change security group to allow TCP 22 (with ur ip so you can ssh in)</p>
 
-<p>ssh -i ~/desktop/app.pem <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x65;&#x63;&#50;&#45;&#117;&#115;&#x65;&#x72;&#x40;&#53;&#x34;&#46;&#50;&#49;&#53;&#46;&#50;&#50;&#55;&#46;&#x31;&#51;&#56;">&#x65;&#x63;&#50;&#45;&#x75;&#115;&#x65;&#114;&#64;&#53;&#52;&#46;&#50;&#49;&#53;&#46;&#50;&#50;&#x37;&#46;&#49;&#x33;&#56;</a>
+<p>ssh -i ~/desktop/app.pem <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x65;&#x63;&#50;&#45;&#117;&#115;&#101;&#114;&#64;&#x35;&#52;&#46;&#50;&#49;&#53;&#46;&#50;&#50;&#55;&#46;&#49;&#x33;&#56;">&#101;&#x63;&#50;&#x2d;&#x75;&#115;&#x65;&#114;&#x40;&#x35;&#52;&#46;&#x32;&#x31;&#53;&#x2e;&#x32;&#50;&#x37;&#x2e;&#49;&#x33;&#x38;</a>
 sudo yum update
 sudo yum install -y docker
 sudo service docker start
