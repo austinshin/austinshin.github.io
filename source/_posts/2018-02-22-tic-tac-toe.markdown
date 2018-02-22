@@ -5,7 +5,7 @@ date: 2018-02-22 14:16:49 -0800
 comments: true
 categories: sideproject
 ---
-Created a tic-tac-toe command line game really quick~
+Created a tic-tac-toe command line game to practice coding under time constraints and practice using node's readline.
 
 Find it here:
 
