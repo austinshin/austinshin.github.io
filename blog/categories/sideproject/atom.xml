@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sideproject | Austin Shin]]></title>
   <link href="http://austinshin.github.io/blog/categories/sideproject/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-02-22T14:20:40-08:00</updated>
+  <updated>2018-02-22T14:26:57-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[tic-tac-toe cli]]></title>
+    <link href="http://austinshin.github.io/blog/2018/02/22/tic-tac-toe/"/>
+    <updated>2018-02-22T14:16:49-08:00</updated>
+    <id>http://austinshin.github.io/blog/2018/02/22/tic-tac-toe</id>
+    <content type="html"><![CDATA[<p>Created a tic-tac-toe command line game really quick~</p>
+
+<p>Find it here:</p>
+
+<p><a href="https://github.com/austinshin/tictactoe-cli">tictactoe</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[blackjack]]></title>
+    <link href="http://austinshin.github.io/blog/2018/02/22/blackjack/"/>
+    <updated>2018-02-22T14:16:41-08:00</updated>
+    <id>http://austinshin.github.io/blog/2018/02/22/blackjack</id>
+    <content type="html"><![CDATA[<p>Created a blackjack game run through command line -</p>
+
+<p>Find it here:</p>
+
+<p><a href="https://github.com/austinshin/blackjack-cli">blackjack</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[amazon]]></title>
@@ -177,7 +203,7 @@ unit test endpoints</p>
 
 <p>ec2 related stuff:
 <a href="https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce">https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce</a>
-ssh -i ~/.ssh/redis.pem <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#101;&#99;&#50;&#45;&#117;&#115;&#101;&#114;&#x40;&#51;&#x34;&#x2e;&#x32;&#48;&#57;&#x2e;&#x39;&#53;&#x2e;&#49;&#x36;&#x30;">&#x65;&#x63;&#50;&#45;&#117;&#115;&#x65;&#x72;&#64;&#51;&#x34;&#46;&#50;&#x30;&#57;&#46;&#57;&#53;&#46;&#x31;&#x36;&#48;</a></p>
+ssh -i ~/.ssh/redis.pem <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#101;&#99;&#50;&#45;&#x75;&#x73;&#101;&#114;&#x40;&#51;&#x34;&#x2e;&#50;&#48;&#x39;&#x2e;&#x39;&#53;&#46;&#49;&#54;&#x30;">&#x65;&#99;&#50;&#x2d;&#x75;&#x73;&#x65;&#x72;&#64;&#x33;&#x34;&#46;&#x32;&#48;&#x39;&#x2e;&#x39;&#53;&#x2e;&#49;&#x36;&#x30;</a></p>
 
 <p>docker stuff</p>
 
@@ -217,7 +243,7 @@ ecs-cli up &ndash;keypair app &ndash;capability-iam &ndash;size 3 &ndash;instanc
 ecs-cli compose &ndash;file docker-compose.yml up
 change security group to allow TCP 22 (with ur ip so you can ssh in)</p>
 
-<p>ssh -i ~/desktop/app.pem <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x65;&#x63;&#50;&#45;&#117;&#115;&#101;&#114;&#64;&#x35;&#52;&#46;&#50;&#49;&#53;&#46;&#50;&#50;&#55;&#46;&#49;&#x33;&#56;">&#101;&#x63;&#50;&#x2d;&#x75;&#115;&#x65;&#114;&#x40;&#x35;&#52;&#46;&#x32;&#x31;&#53;&#x2e;&#x32;&#50;&#x37;&#x2e;&#49;&#x33;&#x38;</a>
+<p>ssh -i ~/desktop/app.pem <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#x63;&#50;&#45;&#x75;&#x73;&#101;&#114;&#64;&#x35;&#52;&#x2e;&#50;&#49;&#53;&#46;&#x32;&#x32;&#x37;&#x2e;&#49;&#51;&#56;">&#x65;&#x63;&#50;&#45;&#x75;&#115;&#101;&#x72;&#x40;&#53;&#x34;&#x2e;&#x32;&#x31;&#x35;&#46;&#x32;&#50;&#55;&#x2e;&#49;&#x33;&#x38;</a>
 sudo yum update
 sudo yum install -y docker
 sudo service docker start
@@ -229,7 +255,7 @@ docker info</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Aircasa Project]]></title>
+    <title type="html"><![CDATA[Aircasa - A housing marketplace web application]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/22/legacy/"/>
     <updated>2018-01-22T10:23:26-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/22/legacy</id>
@@ -317,7 +343,7 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Slackcasa Project]]></title>
+    <title type="html"><![CDATA[Slackcasa - chatting web app]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/22/greenfield/"/>
     <updated>2018-01-22T10:23:16-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/22/greenfield</id>
@@ -366,7 +392,7 @@ One more thing, <strong>making a site with CSS from scratch is hard and takes pr
 5. Git Workflow
 6. Websockets, Postgres, Passport</p>
 
-<p>This was my first time working with multiple team members to create a project.<br/>
+<p>This was my first time working with multiple team members to create a project.
 The application goal was to create an interactive, seamless, lagless environment with users connecting and chatting to each other.
 My goal was to practice communicating effectively, create a modular codebase such that other members could implement features without running into merge conflicts, and learn new technologies.</p>
 
@@ -410,15 +436,6 @@ It was in a sense exhausting, but felt well worth it. Everyone felt on the same 
 <li>Learning new technologies is always fun, and I was surprised at how good I&rsquo;ve gotten at it. I&rsquo;m aiming to get faster and better at it.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[mvp]]></title>
-    <link href="http://austinshin.github.io/blog/2018/01/22/mvp/"/>
-    <updated>2018-01-22T10:23:10-08:00</updated>
-    <id>http://austinshin.github.io/blog/2018/01/22/mvp</id>
-    <content type="html"><![CDATA[<p>MVP blog post</p>
 ]]></content>
   </entry>
   
