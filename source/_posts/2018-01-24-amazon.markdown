@@ -3,7 +3,7 @@ layout: post
 title: "amazon"
 date: 2018-01-24 16:42:45 -0800
 comments: true
-categories: sideprojects
+categories: sideproject
 ---
 Should I use Postgres or Mongo or MySQL
 
