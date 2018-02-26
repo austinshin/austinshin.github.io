@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sideproject | Austin Shin]]></title>
   <link href="http://austinshin.github.io/blog/categories/sideproject/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-02-26T13:39:45-08:00</updated>
+  <updated>2018-02-26T13:46:48-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -71,6 +71,12 @@ I worked on a project with a team building a backend API services system dealing
 <p>I decided to use NEO4j as a database because it was a graph database. The service I was building was only really interested in the relationships between a user and a product. Therefore, a database system that focused on relationships (a graph) which can create ‘nodes’ as users/products and ‘edges’ relationships made the most sense. This meant data modeling was clearer, data querying was more efficient vs doing multiple ‘joins’ on a table trying to create a relationship, and the database abstracted away all the complicated things. Likewise, visualization from neo4j was a plus.</p>
 
 <p>What you sketch out on a whiteboard can be directly translated into neo4j. This was one of the best points of it.</p>
+
+<h2>The recommendation algorithm</h2>
+
+<p>I was particularly interested in the collaboration-filtering algorithm that Amazon used. It turns out that there are numerous ways to implement one and even combine it with a content-filtering one. I did a lot of research on machine learning and how one could transform categorical values into something comparable. This is usually done using the <strong>Pearson-correlation coefficient or cosine coefficient</strong>. After converting categorical values and representing thema s a vector, you do some linear algebra (grabbing the magnitudes) and then can transform it into a statistical value. Aftewards, one applies the k-nearest-neighbors algorithm to the two things you want to compare and you can get a list of recommended results that way.</p>
+
+<p>I managed to implement a similarity value calculator between two different users, but for the sake of the project and simplifying it, I decided to work on the k-nearest-neighbors algorithm later. It was best to black-box the algorithm and work on the overall microservice structure first as that was the goal (dealing with optimization of queries). I definitely plan on revisiting machine learning later on (super interesting).</p>
 
 <h2>Data generation of 40million</h2>
 
