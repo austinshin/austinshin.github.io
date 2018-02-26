@@ -4,7 +4,7 @@
   <title><![CDATA[Austin Shin]]></title>
   <link href="http://austinshin.github.io/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
-  <updated>2018-02-22T14:47:57-08:00</updated>
+  <updated>2018-02-26T13:39:45-08:00</updated>
   <id>http://austinshin.github.io/</id>
   <author>
     <name><![CDATA[Austin Shin]]></name>
@@ -523,87 +523,190 @@ You can ssh them into your instances/containers.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[amazon]]></title>
+    <title type="html"><![CDATA[backazon - a recommendation service ]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/24/amazon/"/>
     <updated>2018-01-24T16:42:45-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/24/amazon</id>
-    <content type="html"><![CDATA[<p>Should I use Postgres or Mongo or MySQL</p>
-
-<p>Should I use a giant big table or should I use many different entries</p>
-
-<p>Should I use graphQL?</p>
-
-<p>Listings Endpoints
-  - (GET) content query for data  -> returns an array of listing objects
-  - (GET) collab query for data -> returns an array of listing objects</p>
+    <content type="html"><![CDATA[<p>Project summary:
+I worked on a project with a team building a backend API services system dealing with millions of data. It was to answer a business question: “Which recommendation algorithm collaboration or content-filtered, generates more sales/revenue in Amazon?”</p>
 
 <!-- more -->
 
 
-<p>Using Redis:
-Some questions I asked myself while thinking about and hearing about redis are&hellip;
-What is the point of Redis?
-What is caching?
-What does it mean to store it in memory?
-What makes it so much faster than storing it in a MYSQL or NOSQL database?
-What are the tradeoffs of storing it in cache?
-How does it work?
-How can I use it properly?
-How can I optimize it even more?</p>
+<p>Collaborative filtering is based on user-user comparison from previously viewed/bought/favorited items.</p>
 
-<p>As you increase database size, so does your memory size.</p>
+<p>Content filtering is based on item-item comparison from past browsing history</p>
 
-<p>redis-server
-redis-cli
-FLUSHDB</p>
+<p>A lot of initial planning was done as it was going to be a service integrated with 4 other services.</p>
 
-<p>Using Neo4J:
-$ neo4j-client -u neo4j localhost
-pw: 123
-localhost:7474</p>
+<h2>First major decision was to decide which database to use.</h2>
 
-<p>graph databases are super cool and efficient.
-look at the walmart case studies
-basically worked on learning about cyphers and setting up data</p>
+<p>MYSQL vs NOSQL.</p>
 
-<p>tomorrow is going to be about trying to figure out how optimization and querying 10million data points.</p>
+<p>Should I use Postgres or Mongo or MySQL?</p>
 
-<p>&ndash;
-important queries:
-&ldquo; FOR GETTING ALL RELATIONSHIPS &rdquo;
-MATCH (a:USER)-[relatedTo]-(b) RETURN a.name, b.name, Type(relatedTo), relatedTo;</p>
+<p>Should I use a giant big table or should I use many different entries?</p>
+
+<p>Should I use graphQL as a querying system?</p>
+
+<p>All of these interesting databases I was reading about sounded great until I found one: neo4j.</p>
+
+<p>I decided to use NEO4j as a database because it was a graph database. The service I was building was only really interested in the relationships between a user and a product. Therefore, a database system that focused on relationships (a graph) which can create ‘nodes’ as users/products and ‘edges’ relationships made the most sense. This meant data modeling was clearer, data querying was more efficient vs doing multiple ‘joins’ on a table trying to create a relationship, and the database abstracted away all the complicated things. Likewise, visualization from neo4j was a plus.</p>
+
+<p>What you sketch out on a whiteboard can be directly translated into neo4j. This was one of the best points of it.</p>
+
+<h2>Data generation of 40million</h2>
+
+<p>I created a data generation script. Some of the problems I ran into were creating millions of data which was solved by generating data in batches of CSV files (JSON could have worked as well). Inserting data was done the same way.</p>
+
+<p>A total of 10 million users, 3000 top trending product nodes were created.</p>
+
+<p>A total of 50 million relationship types (click, wishlist, view, purchased, car) were created.</p>
+
+<h2>Testing endpoints.</h2>
+
+<p>Eventually I ended up implementing &lsquo;fake endpoints&rsquo; to the other services. I used my fake data to help test these results. One thing I noticed was the long query time (314ms) to return a recommended item list. I wanted to go for a much more faster, realistic speed especially when it comes to serving up millions of users at once. I wanted to aim for something below 200ms.</p>
+
+<p>I looked up optimization methods and a couple of big words popped out:</p>
+
+<p><strong>load balancing, horizontal/vertical scaling, sharding, caching, message bus (queues)</strong></p>
+
+<p>In order to speed up the query time, I decided to use Redis a key-value caching database. By caching values, it optimized lookups on the most popular items to be pretty much instantaneous. The results of using redis vs not using it was night and day.</p>
+
+<p>The end result was a 100x faster querying system going from 300ms -> 3ms.</p>
+
+<p>The idea was to create a system where in the background at night the microservice would periodically update the cache for the most popular users. If the site was serving up someone who didn&rsquo;t come often, it&rsquo;d return a recommended list after calculations.</p>
+
+<p><img src="https://puu.sh/zg611/931730d3d1.png" alt="stress test results" /></p>
+
+<p>My benchmark query was 1ms. RPS: 1800~
+An average query to receive some info about a user was 12ms. RPS: 1300~
+An average query to receive some info about a product was 9ms. RPS: 1800~
+An average query to recommend a new product was about 350ms. RPS: 44~
+An average query to recommend a new product CACHED was about 6ms. RPS: 2300~</p>
+
+<hr />
+
+<p>An interesting thing that eventually came up was how to deploy a microservice like this to the &lsquo;real world&rsquo;.</p>
+
+<p>One of the most popular methods was to use AWS EC2 and Docker in conjunction. A lot of research was done into this and a lot of cool things were learned. This was probably my favorite (and slightly painful) part of the project.</p>
+
+<p>Basically you could use EC2 as a cloud computer along with Docker as a vm in order to spin up multiple instances of a certain app. It could be a db, or even my api app I created. The ability to create multiple same instances meant one could load balance. If you create multiple dbs, you could potentially shard data. All of this fell under the category of horizontally scaling ~ spreading out the work done over many instances.</p>
+
+<p>AWS and docker was tricky to learn at first, but eventually I learned it and got my app to deploy.</p>
+
+<h2>Below is a list of randomized notes I took while doing the project</h2>
+
+<p>Using Redis:</p>
+
+<p>Some questions I asked myself while thinking about and hearing about redis are&hellip;</p>
+
+<p>What is the point of Redis?</p>
+
+<p>What is caching?</p>
+
+<p>What does it mean to store it in memory?</p>
+
+<p>What makes it so much faster than storing it in a MYSQL or NOSQL database?</p>
+
+<p>What are the tradeoffs of storing it in cache?</p>
+
+<p>How does it work?</p>
+
+<p>How can I use it properly?</p>
+
+<p>How can I optimize it even more?</p>
+
+<p>As you increase database size, so does your memory size.
+<strong>useful commands</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>redis-server</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>redis-cli</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>FLUSHDB</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Using Neo4J:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ neo4j-client -u neo4j localhost</span></code></pre></td></tr></table></div></figure>
+
+
+<p>localhost:7474</p>
+
+<p>important queries:</p>
+
+<p>&ldquo; FOR GETTING ALL RELATIONSHIPS &rdquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MATCH (a:USER)-[relatedTo]-(b) RETURN a.name, b.name, Type(relatedTo), relatedTo;</span></code></pre></td></tr></table></div></figure>
+
 
 <p>&ldquo; FOR GETTING RECOMMENDED LIST FOR A SPECIFIC USER ID BASED ON WHAT OTHER USERS HAVE PURCHASED.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>"MATCH (a:USER {user_id:'59185'})-[:RELATION]-&gt;(m)&lt;-[:RELATION]-(product),(product)-[:RELATION]-&gt;(m2) RETURN m2.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC LIMIT 5;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>"MATCH (a:USER {user_id:''})-[:RELATION]-&gt;(m)&lt;-[:RELATION]-(product),(product)-[:RELATION]-&gt;(m2) RETURN m2.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC LIMIT 5;</span></code></pre></td></tr></table></div></figure>
 
 
-<p>some things i&rsquo;ve learned:
-data partition into different files.
-csv is faster than json in neo4j for whatever resaon.</p>
 
-<p>CREATE INDEX ON :Label(name);</p>
 
-<p>USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM &ldquo;file:///events1.csv&rdquo; as input
-MATCH (user:USER  {user_id: input.user_id}), (product:PRODUCT {product_id: input.product_id})
-CREATE (user)-[:RELATION { type: input.event_type }]->(product);</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CREATE INDEX ON :Label(name);</span></code></pre></td></tr></table></div></figure>
 
-<p>MATCH (n:Label {name: &lsquo;Kadin Mitchell&rsquo;}),
-(n)-[rel:RELATION]->(follower)
-where rel.type = &lsquo;click&rsquo;
-return n, follower;</p>
 
-<p>MATCH (:USER {name: &lsquo;Kadin Mitchell&rsquo;})-[r]-()
-RETURN r</p>
 
-<p>MATCH (n:Label {name: &lsquo;b&rsquo;}),
-(n)-[rel:RELATION]->(follower)
-where rel.type = &lsquo;FOLLOWS&rsquo;
-return n, follower</p>
 
-<p>append to file for creating a new one&hellip; (look this up)</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>USING PERIODIC COMMIT 500
+</span><span class='line'>LOAD CSV WITH HEADERS FROM "file:///events1.csv" as input
+</span><span class='line'>MATCH (user:USER  {user_id: input.user_id}), (product:PRODUCT {product_id: input.product_id})
+</span><span class='line'>CREATE (user)-[:RELATION { type: input.event_type }]-&gt;(product);</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MATCH (n:Label {name: 'Kadin Mitchell'}),
+</span><span class='line'>(n)-[rel:RELATION]-&gt;(follower)
+</span><span class='line'>where rel.type = 'click'
+</span><span class='line'>return n, follower;</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MATCH (:USER {name: 'Kadin Mitchell'})-[r]-()
+</span><span class='line'>RETURN r</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MATCH (n:Label {name: 'b'}),
+</span><span class='line'>(n)-[rel:RELATION]-&gt;(follower)
+</span><span class='line'>where rel.type = 'FOLLOWS'
+</span><span class='line'>return n, follower</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Dokku
 EC2
@@ -633,13 +736,8 @@ need to add &ldquo;write to product&rdquo; and &ldquo;write to user&rdquo;?
  and &ldquo;create a relationship?&rdquo;
  can these just be the same thigns over and over again so we can delete it ?</p>
 
-<p>i was recreating a clone amazon web service to answer a certain business question.
-add some bs about mocha tests?
-I had to generate 10 million data points for my historical dataset&hellip;
-made sure to test incrementally
-to make sure everything works
-blah blah
-describe  a time when you discovered a small problem eraly on. whatd you do to prevent it from becoming a large rproblem</p>
+<p>made sure to test incrementally
+to make sure everything works</p>
 
 <p>store in redis as {user_id: recommendedList}?
 or&hellip; store as index = user_id : recommendedList?</p>
@@ -658,12 +756,8 @@ takes 300ms to query neo4j to calculate a recommendation.</p>
 2. change redis key:value schema (to be {user_id: [recommended list]})
 3. add a cronjob to update every so often&hellip;
 4. add logic to &ldquo;check if user/product exists. if they don&rsquo;t, MERGE them into neo4j, create a relationship&rdquo; (use a queue system or something to do this? not sure&hellip;)
-^ should be able to handle a good amount of new users.</p>
-
-<ol>
-<li>start working on docker and getting that set up i suppose.</li>
-</ol>
-
+^ should be able to handle a good amount of new users.
+5. start working on docker and getting that set up.</p>
 
 <p>Feb 5:
 refactored redis to use hash table instead of arrays~ because I needed to keep track of userid
@@ -687,15 +781,15 @@ unit test endpoints</p>
 
 <p>ec2 related stuff:
 <a href="https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce">https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce</a>
-ssh -i ~/.ssh/redis.pem <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#101;&#99;&#50;&#x2d;&#117;&#x73;&#101;&#x72;&#x40;&#51;&#52;&#46;&#x32;&#x30;&#57;&#x2e;&#57;&#x35;&#x2e;&#49;&#x36;&#48;">&#101;&#99;&#x32;&#x2d;&#x75;&#x73;&#x65;&#x72;&#x40;&#x33;&#x34;&#x2e;&#x32;&#x30;&#57;&#x2e;&#x39;&#53;&#x2e;&#x31;&#54;&#48;</a></p>
+ssh -i ~/.ssh/redis.pem ec2-user</p>
 
 <p>docker stuff</p>
 
 <ol>
 <li>make a dockerfile</li>
 <li>add all the commands</li>
-<li>docker build -t austinshin/thesis .</li>
-<li>docker run -d -p 49160:3000 -v $(pwd):/src/app &ndash;name thesis austinshin/thesis</li>
+<li>docker build -t austinshin/recservice .</li>
+<li>docker run -d -p 49160:3000 -v $(pwd):/src/app &ndash;name thesis austinshin/recservice</li>
 <li>to remove&hellip;</li>
 <li>stop the docker container</li>
 <li>docker rm containername</li>
@@ -714,27 +808,33 @@ eval &ldquo;$(docker-machine env default)&rdquo;</p>
 
 <hr />
 
-<p>upload to ec2 now</p>
-
-<p>load balancing
-ECS
-figure that hsit out</p>
-
 <p>set up queue and then have it point to multiple databases.</p>
 
-<p>ecs-cli up
-ecs-cli up &ndash;keypair app &ndash;capability-iam &ndash;size 3 &ndash;instance-type t2.medium &ndash;force
-ecs-cli compose &ndash;file docker-compose.yml up
-change security group to allow TCP 22 (with ur ip so you can ssh in)</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ecs-cli up
+</span><span class='line'>ecs-cli up --keypair app --capability-iam --size 3 --instance-type t2.medium --force
+</span><span class='line'>ecs-cli compose --file docker-compose.yml up
+</span><span class='line'>change security group to allow TCP 22 (with ur ip so you can ssh in)
+</span><span class='line'>
+</span><span class='line'>ssh -i ~/desktop/app.pem ec2-user@54.215.227.138
+</span><span class='line'>sudo yum update
+</span><span class='line'>sudo yum install -y docker
+</span><span class='line'>sudo service docker start
+</span><span class='line'>sudo usermod -a -G docker ec2-user
+</span><span class='line'>docker info
+</span><span class='line'>ecs-cli down</span></code></pre></td></tr></table></div></figure>
 
-<p>ssh -i ~/desktop/app.pem <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x65;&#x63;&#x32;&#45;&#117;&#115;&#x65;&#114;&#64;&#x35;&#x34;&#x2e;&#50;&#x31;&#53;&#46;&#x32;&#x32;&#x37;&#x2e;&#x31;&#51;&#x38;">&#x65;&#x63;&#50;&#x2d;&#x75;&#115;&#x65;&#114;&#x40;&#53;&#52;&#x2e;&#x32;&#49;&#x35;&#x2e;&#50;&#50;&#55;&#46;&#49;&#x33;&#56;</a>
-sudo yum update
-sudo yum install -y docker
-sudo service docker start
-sudo usermod -a -G docker ec2-user
-docker info</p>
-
-<p>ecs-cli down</p>
 ]]></content>
   </entry>
   
@@ -925,11 +1025,30 @@ It was in a sense exhausting, but felt well worth it. Everyone felt on the same 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[mvp]]></title>
+    <title type="html"><![CDATA[Text me your chipotle order]]></title>
     <link href="http://austinshin.github.io/blog/2018/01/22/mvp/"/>
     <updated>2018-01-22T10:23:10-08:00</updated>
     <id>http://austinshin.github.io/blog/2018/01/22/mvp</id>
-    <content type="html"><![CDATA[<p>MVP blog post</p>
+    <content type="html"><![CDATA[<p>This was my first time creating a full stack web application from scratch.</p>
+
+<p>Stack used:
+Mongo
+Express
+React
+NodeJS</p>
+
+<!-- more -->
+
+
+<p>Some of the interesting problems I wanted to solve and understand included how webpack worked, the idea behind babel, creating a css layout, and getting functionality of my program to work.</p>
+
+<p>Text me your chipotle order sounds exactly what it sounds like. The idea behind it is that a person wants to buy a chipotle order for his friend. The person links the friend this app. The friend goes through the app, clicking pictures of what he wants with an optional &lsquo;extra ingredients&rsquo; at the end. He inputs his friend&rsquo;s phone number which sends a botted text with the order to him.</p>
+
+<p>It is a very simple program. The idea of using a database was to store user session information. For example, you can just automatically be logged in of some sort and work off that. One other thing I considered was using an e-mail system instead of a texting system (because people are more prone to give out their e-mails over their phone numbers simply cause you can create a fake e-mail).</p>
+
+<p>I ended up using Twilio (over bandwidth). It was overall very simple to setup and create. As for the css layout, I went with using html/css cards. Ideally I would have liked to have created some sort of slideshow method where you scroll through and click yes or no really quickly.</p>
+
+<p>It was a really quick (1 day) project whipped up to serve some sort of MVP. It was one of the first times I felt amazed by being able to create something from scratch really quickly with some sort of real-life contribution (as dumb as it sounds).</p>
 ]]></content>
   </entry>
   
