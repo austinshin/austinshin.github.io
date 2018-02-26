@@ -1,88 +1,164 @@
 ---
 layout: post
-title: "amazon"
+title: "backazon - a recommendation service "
 date: 2018-01-24 16:42:45 -0800
 comments: true
 categories: sideproject
 ---
-Should I use Postgres or Mongo or MySQL
 
-Should I use a giant big table or should I use many different entries
 
-Should I use graphQL?
-
-Listings Endpoints
-  - (GET) content query for data  -> returns an array of listing objects
-  - (GET) collab query for data -> returns an array of listing objects
+Project summary:
+I worked on a project with a team building a backend API services system dealing with millions of data. It was to answer a business question: “Which recommendation algorithm collaboration or content-filtered, generates more sales/revenue in Amazon?”
 
 <!-- more -->
 
+Collaborative filtering is based on user-user comparison from previously viewed/bought/favorited items.
 
+Content filtering is based on item-item comparison from past browsing history
+
+A lot of initial planning was done as it was going to be a service integrated with 4 other services.
+
+## First major decision was to decide which database to use.
+
+MYSQL vs NOSQL.
+
+Should I use Postgres or Mongo or MySQL?
+
+Should I use a giant big table or should I use many different entries?
+
+Should I use graphQL as a querying system?
+
+All of these interesting databases I was reading about sounded great until I found one: neo4j.
+
+I decided to use NEO4j as a database because it was a graph database. The service I was building was only really interested in the relationships between a user and a product. Therefore, a database system that focused on relationships (a graph) which can create ‘nodes’ as users/products and ‘edges’ relationships made the most sense. This meant data modeling was clearer, data querying was more efficient vs doing multiple ‘joins’ on a table trying to create a relationship, and the database abstracted away all the complicated things. Likewise, visualization from neo4j was a plus.
+
+What you sketch out on a whiteboard can be directly translated into neo4j. This was one of the best points of it.
+
+## Data generation of 40million
+I created a data generation script. Some of the problems I ran into were creating millions of data which was solved by generating data in batches of CSV files (JSON could have worked as well). Inserting data was done the same way.
+
+A total of 10 million users, 3000 top trending product nodes were created.
+
+A total of 50 million relationship types (click, wishlist, view, purchased, car) were created.
+
+## Testing endpoints.
+
+Eventually I ended up implementing 'fake endpoints' to the other services. I used my fake data to help test these results. One thing I noticed was the long query time (314ms) to return a recommended item list. I wanted to go for a much more faster, realistic speed especially when it comes to serving up millions of users at once. I wanted to aim for something below 200ms.
+
+I looked up optimization methods and a couple of big words popped out:
+
+**load balancing, horizontal/vertical scaling, sharding, caching, message bus (queues)**
+
+In order to speed up the query time, I decided to use Redis a key-value caching database. By caching values, it optimized lookups on the most popular items to be pretty much instantaneous. The results of using redis vs not using it was night and day.
+
+The end result was a 100x faster querying system going from 300ms -> 3ms.
+
+The idea was to create a system where in the background at night the microservice would periodically update the cache for the most popular users. If the site was serving up someone who didn't come often, it'd return a recommended list after calculations.
+
+![stress test results](https://puu.sh/zg611/931730d3d1.png)
+
+My benchmark query was 1ms. RPS: 1800~
+An average query to receive some info about a user was 12ms. RPS: 1300~
+An average query to receive some info about a product was 9ms. RPS: 1800~
+An average query to recommend a new product was about 350ms. RPS: 44~
+An average query to recommend a new product CACHED was about 6ms. RPS: 2300~
+
+
+---
+An interesting thing that eventually came up was how to deploy a microservice like this to the 'real world'.
+
+One of the most popular methods was to use AWS EC2 and Docker in conjunction. A lot of research was done into this and a lot of cool things were learned. This was probably my favorite (and slightly painful) part of the project.
+
+Basically you could use EC2 as a cloud computer along with Docker as a vm in order to spin up multiple instances of a certain app. It could be a db, or even my api app I created. The ability to create multiple same instances meant one could load balance. If you create multiple dbs, you could potentially shard data. All of this fell under the category of horizontally scaling ~ spreading out the work done over many instances.
+
+AWS and docker was tricky to learn at first, but eventually I learned it and got my app to deploy.
+
+## Below is a list of randomized notes I took while doing the project
 Using Redis:
+
 Some questions I asked myself while thinking about and hearing about redis are...
+
 What is the point of Redis?
+
 What is caching?
+
 What does it mean to store it in memory?
+
 What makes it so much faster than storing it in a MYSQL or NOSQL database?
+
 What are the tradeoffs of storing it in cache?
+
 How does it work?
+
 How can I use it properly?
+
 How can I optimize it even more?
 
 As you increase database size, so does your memory size.
+**useful commands**
 
+```
 redis-server
+```
+
+```
 redis-cli
+```
+
+```
 FLUSHDB
+```
 
 Using Neo4J:
+
+```
 $ neo4j-client -u neo4j localhost
-pw: 123
+```
+
 localhost:7474
 
-graph databases are super cool and efficient.
-look at the walmart case studies
-basically worked on learning about cyphers and setting up data
-
-tomorrow is going to be about trying to figure out how optimization and querying 10million data points.
-
---
 important queries:
+
 " FOR GETTING ALL RELATIONSHIPS "
+
+```
 MATCH (a:USER)-[relatedTo]-(b) RETURN a.name, b.name, Type(relatedTo), relatedTo;
+```
 
 " FOR GETTING RECOMMENDED LIST FOR A SPECIFIC USER ID BASED ON WHAT OTHER USERS HAVE PURCHASED.
 ```
-"MATCH (a:USER {user_id:'59185'})-[:RELATION]->(m)<-[:RELATION]-(product),(product)-[:RELATION]->(m2) RETURN m2.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC LIMIT 5;
+"MATCH (a:USER {user_id:''})-[:RELATION]->(m)<-[:RELATION]-(product),(product)-[:RELATION]->(m2) RETURN m2.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC LIMIT 5;
 ```
 
-
-some things i've learned:
-data partition into different files.
-csv is faster than json in neo4j for whatever resaon.
-
+```
 CREATE INDEX ON :Label(name);
+```
 
+```
 USING PERIODIC COMMIT 500
 LOAD CSV WITH HEADERS FROM "file:///events1.csv" as input
 MATCH (user:USER  {user_id: input.user_id}), (product:PRODUCT {product_id: input.product_id})
 CREATE (user)-[:RELATION { type: input.event_type }]->(product);
+```
 
+```
 MATCH (n:Label {name: 'Kadin Mitchell'}),
 (n)-[rel:RELATION]->(follower)
 where rel.type = 'click'
 return n, follower;
+```
 
+```
 MATCH (:USER {name: 'Kadin Mitchell'})-[r]-()
 RETURN r
+```
 
+```
 MATCH (n:Label {name: 'b'}),
 (n)-[rel:RELATION]->(follower)
 where rel.type = 'FOLLOWS'
 return n, follower
-
-append to file for creating a new one... (look this up)
-
+```
 Dokku
 EC2
 Docker
@@ -112,17 +188,11 @@ need to add "write to product" and "write to user"?
  can these just be the same thigns over and over again so we can delete it ?
 
 
-i was recreating a clone amazon web service to answer a certain business question.
-add some bs about mocha tests?
-I had to generate 10 million data points for my historical dataset...
 made sure to test incrementally
 to make sure everything works
-blah blah
-describe  a time when you discovered a small problem eraly on. whatd you do to prevent it from becoming a large rproblem
 
 store in redis as {user_id: recommendedList}?
 or... store as index = user_id : recommendedList?
-
 
 takes about 5 seconds to query and cache 10 results
 takes about 12 seconds to query and cache 100 reuslts
@@ -140,8 +210,7 @@ TODO:
 3. add a cronjob to update every so often...
 4. add logic to "check if user/product exists. if they don't, MERGE them into neo4j, create a relationship" (use a queue system or something to do this? not sure...)
 ^ should be able to handle a good amount of new users.
-
-5. start working on docker and getting that set up i suppose.
+5. start working on docker and getting that set up.
 
 Feb 5:
 refactored redis to use hash table instead of arrays~ because I needed to keep track of userid
@@ -165,14 +234,14 @@ work on collaborative recommendation algorithm
 -------------
 ec2 related stuff:
 https://medium.com/@andrewcbass/install-redis-v3-2-on-aws-ec2-instance-93259d40a3ce
-ssh -i ~/.ssh/redis.pem ec2-user@34.209.95.160
+ssh -i ~/.ssh/redis.pem ec2-user
 
 docker stuff
 
 1. make a dockerfile
 2. add all the commands
-3. docker build -t austinshin/thesis .
-4. docker run -d -p 49160:3000 -v $(pwd):/src/app --name thesis austinshin/thesis
+3. docker build -t austinshin/recservice .
+4. docker run -d -p 49160:3000 -v $(pwd):/src/app --name thesis austinshin/recservice
 5. to remove...
 6. stop the docker container
 7. docker rm containername
@@ -189,14 +258,9 @@ docker exec -t -i recommendationservice_neo4j_1 /bin/bash
 eval "$(docker-machine env default)"
 
 ----------------------------------
-upload to ec2 now
-
-load balancing
-ECS
-figure that hsit out
-
 set up queue and then have it point to multiple databases.
 
+```
 ecs-cli up
 ecs-cli up --keypair app --capability-iam --size 3 --instance-type t2.medium --force
 ecs-cli compose --file docker-compose.yml up
@@ -208,6 +272,5 @@ sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
 docker info
-
-
 ecs-cli down
+```

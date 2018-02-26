@@ -1,8 +1,28 @@
 ---
 layout: post
-title: "mvp"
+title: "Text me your chipotle order"
 date: 2018-01-22 10:23:10 -0800
 comments: true
 categories: sideproject
 ---
-MVP blog post
+
+This was my first time creating a full stack web application from scratch.
+
+Stack used:
+Mongo
+Express
+React
+NodeJS
+
+<!-- more -->
+
+Some of the interesting problems I wanted to solve and understand included how webpack worked, the idea behind babel, creating a css layout, and getting functionality of my program to work.
+
+Text me your chipotle order sounds exactly what it sounds like. The idea behind it is that a person wants to buy a chipotle order for his friend. The person links the friend this app. The friend goes through the app, clicking pictures of what he wants with an optional 'extra ingredients' at the end. He inputs his friend's phone number which sends a botted text with the order to him.
+
+It is a very simple program. The idea of using a database was to store user session information. For example, you can just automatically be logged in of some sort and work off that. One other thing I considered was using an e-mail system instead of a texting system (because people are more prone to give out their e-mails over their phone numbers simply cause you can create a fake e-mail).
+
+I ended up using Twilio (over bandwidth). It was overall very simple to setup and create. As for the css layout, I went with using html/css cards. Ideally I would have liked to have created some sort of slideshow method where you scroll through and click yes or no really quickly.
+
+It was a really quick (1 day) project whipped up to serve some sort of MVP. It was one of the first times I felt amazed by being able to create something from scratch really quickly with some sort of real-life contribution (as dumb as it sounds).
+
