@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Austin Shin]]></title>
-  <link href="http://austinshin.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: manga | Austin Shin]]></title>
+  <link href="http://austinshin.github.io/blog/categories/manga/atom.xml" rel="self"/>
   <link href="http://austinshin.github.io/"/>
   <updated>2019-07-30T01:01:23-07:00</updated>
   <id>http://austinshin.github.io/</id>
